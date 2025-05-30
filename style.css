@@ -101,17 +101,19 @@ body {
 
 .linker {
   display: grid;
-  grid-template: 1fr / repeat(4, 1fr)
+  grid-template: 1fr / repeat(3, 1fr)
 }
 
 .link {
-  font-size: 2vh;
+  font-size: 2.5vh;
   color: black;
   place-content: center;
+  grid-area: 1/2/2/3;
+  text-decoration: none;
 }
 
 .link:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: rgb(255, 160, 215)
 }
 
@@ -119,6 +121,7 @@ body {
   height: 5vh;
   width: 5vh;
   margin: 1vh;
+  grid-area: 1/1/2/2
 }
 
 /* ===/ OTHERBAR STYLES /=== */
@@ -142,7 +145,7 @@ body {
 
 .searchCont {
   display: grid;
-  grid-template: 1fr / 1fr 10fr 3fr 1fr;
+  grid-template: 1fr / 1fr 10fr 2fr 1fr 2fr 1fr;
 }
 
 .search {
@@ -158,21 +161,39 @@ body {
   margin: 1vh;
 }
 
+.topperOne {
+  grid-area: 1/4/2/5;
+}
+
+.topperTwo {
+  grid-area: 1/5/1/6;
+}
+
 .bottomNav {
   margin: 1vh;
   display: grid;
-  grid-template: 1fr / 1fr 1fr
+  grid-template: 1fr / repeat(4, 1fr)
 }
 
 .user {
   width: 40vh;
   display: grid;
-  grid-template: 1fr / 1fr 1fr
+  grid-template: 1fr / 1fr 2fr;
 }
 
 .profilePic {
   height: 7vh;
   width: 7vh;
+  margin: 1vh;
+}
+
+.profilePic.main{
+  height: 10vh;
+  width: 10vh;
+}
+
+.userText {
+  place-content: center;
 }
 
 .welcome {
@@ -180,8 +201,13 @@ body {
 }
 
 .name {
-  font-size: 3vh;
+  font-size: 3.5vh;
   place-content: center;
+}
+
+.buttons {
+  place-content: center;
+  grid-area: 1/4/2/5;
 }
 
 .buttons>* {
@@ -190,7 +216,7 @@ body {
 }
 
 button {
-  padding: 0.7vh 1.5vh; 
+  padding: 1vh 1.8vh; 
   background-color: rgb(189, 4, 50);
   color: white;
   border-radius: 0.5vh;
@@ -304,15 +330,40 @@ button:hover {
   margin: 1vh;
 }
 
+.impText,
+.fillerText {
+  margin: 1vh;
+}
+
 .impText {
   font-weight: 700;
   background-color: rgb(255, 195, 203);
-  font-size: 2vh;
+  font-size: 2.2vh;
+}
+
+.fillerText {
+  font-size: 1.8vh;
 }
 
 .opener {
   font-size: 2.8vh;
   margin: 1vh
+}
+
+.trender {
+  display: grid;
+  grid-template: 1fr / 1fr 4fr;
+  margin: 0.5vh;
+  background-color: rgb(255, 135, 155);
+}
+
+.future {
+  background-color: rgb(255, 195, 203);
+}
+
+.namer {
+  font-size: 2.5vh;
+  font-weight: 900;
 }
 
 /* ==== FOOTER STYLES: DO NOT TOUCH!! ==== */
